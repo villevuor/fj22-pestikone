@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+*/
+
+// $pink: #ff8080;
+// $pink-invert: #fff;
+// $primary: $pink;
+// $primary-invert: $pink-invert;
+$family-sans-serif: 'Source Sans Pro', sans-serif;
+
+@import "../node_modules/bulma/bulma";
+
+body {
+  text-align: center !important;
+}
+
+.hero {
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+h3 {
+  margin: 4em 0 1em !important;
+}
+
+.button {
+  margin-top: 4em;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #e6e6e6; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
