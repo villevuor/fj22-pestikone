@@ -1,3 +1,6 @@
+var secret;
+var id;
+
 document.addEventListener('DOMContentLoaded', function () {
   var values = [50,50,50,50,50,50,50,50,50,50,50,50,50,50]
 
@@ -24,7 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     axios.post('https://muflon.fi/leirinjohtaja.php', {data: values})
     .then(function (response) {
-      console.log(response);
+      //console.log(response);
+
+      secret = response.data.secret;
+      id = response.data.id;
 
       var results = [
         'Onneksi olkoon, olet selvästi leirinjohtajaehdokasmateriaalia! Vastaamasi kysymykset ovat juuri sellaisia, joita Finnjamboreen johdossa joutuu miettimään. Tuleva suurleiri tulee väistämättä vaikuttamaan partioon Suomessa ja sinulla olisi nyt ainutkertainen mahdollisuus jättää kädenjälkesi sen historiaan.',
@@ -36,6 +42,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
       document.getElementById('part1').className = 'content hidden';
       document.getElementById('part2').className = 'content';
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  document.getElementById('send2').onclick = function(event) {
+    event.preventDefault();
+    this.className += ' is-loading';
+
+    var data = {
+      id: id,
+      secret: secret,
+      name: document.getElementById("name").value,
+      contact: document.getElementById("contact").value
+    }
+
+    axios.put('https://muflon.fi/leirinjohtaja.php', data)
+    .then(function (response) {
+      document.getElementById("name").value = '';
+      document.getElementById("contact").value = '';
+      document.getElementById('send2').innerText = 'Kiitos!';
+      document.getElementById('send2').className = 'button is-success is-large';
+
     })
     .catch(function (error) {
       console.log(error);
