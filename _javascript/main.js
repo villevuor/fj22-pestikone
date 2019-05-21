@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var values = [50,50,50,50,50,50,50,50,50,50,50,50]
+  var values = [50,50,50,50,50,50,50,50,50,50,50,50,50,50]
 
   document.getElementById('slider0').oninput = function() { values[0] = this.value; }
   document.getElementById('slider1').oninput = function() { values[1] = this.value; }
