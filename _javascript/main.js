@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('slider9').oninput = function() { values[9] = this.value; }
   document.getElementById('slider10').oninput = function() { values[10] = this.value; }
   document.getElementById('slider11').oninput = function() { values[11] = this.value; }
+  document.getElementById('slider12').oninput = function() { values[12] = this.value; }
+  document.getElementById('slider13').oninput = function() { values[13] = this.value; }
 
   document.getElementById('send').onclick = function(event) {
     event.preventDefault();
