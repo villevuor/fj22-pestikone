@@ -38,16 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
         'Tästä se lähtee: perusperiaatteet kuntoon ja tavoitteita luomaan! Suurleirin reunaehtoja määritellään tulevien leirinjohtajien kanssa. Jos haluat saada siis äänesi vielä paremmin kuuluviin, niin hae leirinjohtajaksi!'
       ]
 
-      document.getElementById('result').innerText = results[Math.floor(Math.random()*(3))];
-
-      document.getElementById('part1').className = 'content hidden';
-      document.getElementById('part2').className = 'content';
-
       window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
       });
+
+      document.getElementById('result').innerText = results[Math.floor(Math.random()*(3))];
+
+      document.getElementById('part1').className = 'content hidden';
+      document.getElementById('part2').className = 'content';
     })
     .catch(function (error) {
       console.log(error);
