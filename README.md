@@ -1,8 +1,12 @@
-# Start package for [Bulma](http://bulma.io)
+# Pestikone
+
+Web site to market leadership volunteer positions of Finnjamboree 2022
+
+
+
+## Start package for [Bulma](http://bulma.io)
 
 Tiny npm package that includes the `npm` **dependencies** you need to **build your own website** with Bulma.
-
-<a href="http://bulma.io"><img src="https://raw.githubusercontent.com/jgthms/bulma-start/master/bulma-start.png" alt="Bulma: a Flexbox CSS framework" style="max-width:100%;" width="600" height="315"></a>
 
 ## Install
 
